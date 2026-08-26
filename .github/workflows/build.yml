@@ -1,0 +1,27 @@
+name: build
+
+# Compile every résumé on push/PR so a broken macro fails here, not the night
+# before a deadline. PDFs are uploaded as artifacts (kept 7 days).
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: texlive/texlive:TL2025-historic   # keep in sync with Dockerfile
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build every résumé (all applications × templates)
+        run: sh scripts/build-all.sh
+        env:
+          TEXMFVAR: /tmp/texmf-var
+
+      - name: Upload compiled PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: resumes
+          path: out/*.pdf
+          retention-days: 7

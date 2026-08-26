@@ -1,0 +1,2 @@
+# Everything LaTeX generates lands in out/ (latexmk/lualatex -output-directory).
+out/

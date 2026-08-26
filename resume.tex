@@ -1,0 +1,20 @@
+% ---------------------------------------------------------------------------
+% Build wrapper. You never edit this per application.
+%
+% The template and application are injected as macros on the command line;
+% scripts/build.sh does it for you:
+%
+%   lualatex "\def\template{modern}\def\app{acme-senior-swe}\input{resume.tex}"
+%
+% \expandafter expands \template BEFORE \documentclass reads it, so the class
+% name is 'modern', not the literal token \template (keeps LaTeX from warning
+% about a class/name mismatch).
+% ---------------------------------------------------------------------------
+\providecommand{\template}{classic}          % default when run bare, for quick tests
+\providecommand{\app}{acme-senior-swe}
+
+\expandafter\documentclass\expandafter{\template}
+
+\begin{document}
+\input{applications/\app.tex}
+\end{document}

@@ -1,0 +1,34 @@
+% ---------------------------------------------------------------------------
+% common/resume-api.tex — the Template API (macro contract).
+%
+% Every template (templates/*.cls) MUST implement all of the macros and the
+% environment below. Section files use ONLY these — they never contain
+% formatting. This file does not define them; it DOCUMENTS the contract and,
+% at \begin{document}, verifies the active template implemented every one.
+% A missing macro is a hard error, not a silent mis-render.
+%
+%   \resumeheader{name}{tagline}
+%   \contact{email}{phone}{location}{links}
+%   \ressection{Title}
+%   \job{title}{company}{location}{dates}      + a bullets environment
+%   \project{name}{stack}{link}                + a bullets environment
+%   \education{degree}{institution}{location}{dates}
+%   \skillgroup{category}{comma, separated, list}
+%   \begin{bullets} \item ... \end{bullets}
+% ---------------------------------------------------------------------------
+\ProvidesFile{resume-api.tex}[2026/08/26 v1 Resume template API contract]
+
+\makeatletter
+\def\resume@required{%
+  resumeheader,contact,ressection,job,project,education,skillgroup,bullets,endbullets%
+}
+\AtBeginDocument{%
+  \@for\resume@cs:=\resume@required\do{%
+    \@ifundefined{\resume@cs}{%
+      \ClassError{resume-api}%
+        {The active template is missing '\resume@cs' (required by common/resume-api.tex)}%
+        {Every template must define all macros/environments listed in common/resume-api.tex.}%
+    }{}%
+  }%
+}
+\makeatother
