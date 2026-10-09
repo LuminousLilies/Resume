@@ -27,6 +27,7 @@ container — nothing to install on your machine.
 make build APP=platform TEMPLATE=modern   # -> out/platform--modern.pdf
 make build APP=platform TEMPLATE=classic  # same content, different look
 make build APP=platform-compact TEMPLATE=editorial # Keara-inspired, skills-first
+make build APP=personal-projects TEMPLATE=editorial # reusable personal-project entries
 make all                                  # every application × every template
 make list                                 # what's available
 make clean                                # rm -rf out/  (instant artifact wipe)
@@ -45,8 +46,15 @@ existing Docker image. `platform-compact` orders skills, experience, and educati
 `platform` also includes a professional summary. Both reuse the same section files
 and can be built with any template.
 
+`personal-projects` is a separate project supplement highlighting AI developer
+tooling, LilyReader, and the Luminous Lilies catalog pipeline. Its entries live in
+`sections/projects/` and can be included in any application. Project selection and
+source evidence are recorded in [the GitHub review](docs/github-project-review.md).
+
 Content is authored directly in LaTeX, as described in ADR-0005. `resume.md` is the
 source material for editorial selection; it is **not automatically imported**.
+The local source Markdown, reference PDF, and generated `out/` directory are
+gitignored. A fresh clone builds from the curated LaTeX without those references.
 Update these files to change the generated resumes:
 
 - `common/identity.tex`: name, contact details, location, and links.

@@ -30,10 +30,10 @@ and routine security maintenance remain in `resume.md` for future tailoring.
 
 Ashley clarified the four-role history on October 9, 2026:
 
-- QA Engineer: May 2018–2020.
-- Software Engineer, Design System: 2020–2022. TypeScript conversion, styling
+- QA Engineer: May 2018–2019.
+- Software Engineer, Design System: 2019–2021. TypeScript conversion, styling
   performance, shared components, migration guides, and visual-regression testing.
-- Senior Software Engineer I, Platform Development: 2022–2024. TeamCity to GitHub
+- Senior Software Engineer I, Platform Development: 2021–2024. TeamCity to GitHub
   Actions and GitHub Enterprise Server to GitHub Enterprise Cloud migrations.
 - Senior Software Engineer II, Platform Development: 2024–Present. Remaining
   platform work, including CI/CD and release automation, testing and infrastructure
@@ -41,3 +41,18 @@ Ashley clarified the four-role history on October 9, 2026:
 
 The existing contact information and education dates are unchanged; check that
 they are current when reviewing the PDF.
+
+## Skills and personal projects
+
+The skills list now names languages, frameworks, platform capabilities, and AI
+integration technologies. The AI review system remains an employment achievement;
+it is not listed as a standalone skill. Personal GitHub source supports MCP server
+development, Claude Code skills and hooks, Ollama, FastAPI, GraphQL, Next.js, and SQL.
+See [GitHub project review](github-project-review.md) for evidence and reusable
+project entries. The personal projects are presented in a separate supplement;
+they are not attributed to SurveyMonkey.
+
+Ashley also confirmed direct Amazon Bedrock API integrations in GitHub Actions,
+Claude actions using Bedrock in GitHub Actions, and local Claude use through
+Bedrock. Bedrock APIs are included in skills, with the GitHub Actions integrations
+described under Senior Software Engineer II.
