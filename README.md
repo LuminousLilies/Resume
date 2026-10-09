@@ -24,19 +24,43 @@ container — nothing to install on your machine.
 ## Build
 
 ```sh
-make build APP=acme-senior-swe TEMPLATE=modern   # -> out/acme-senior-swe--modern.pdf
-make build APP=acme-senior-swe TEMPLATE=classic  # same content, different look
-make all                                         # every application × every template
-make list                                        # what's available
-make clean                                       # rm -rf out/  (instant artifact wipe)
+make build APP=platform TEMPLATE=modern   # -> out/platform--modern.pdf
+make build APP=platform TEMPLATE=classic  # same content, different look
+make build APP=platform-compact TEMPLATE=editorial # Keara-inspired, skills-first
+make all                                  # every application × every template
+make list                                 # what's available
+make clean                                # rm -rf out/  (instant artifact wipe)
 ```
 
 Output is named `out/<application>--<template>.pdf`, so template variants of the same
 résumé never overwrite each other. Everything generated lives in `out/` (gitignored).
 
+## Current content and review draft
+
+Start with `out/platform-compact--editorial.pdf` after running the corresponding
+build command above. The `editorial` template follows the supplied Keara Bird
+resume's contact-first header, dark divider, condensed headings, monospaced body,
+and single-column layout. It uses Source Code Pro and Roboto Condensed from the
+existing Docker image. `platform-compact` orders skills, experience, and education;
+`platform` also includes a professional summary. Both reuse the same section files
+and can be built with any template.
+
+Content is authored directly in LaTeX, as described in ADR-0005. `resume.md` is the
+source material for editorial selection; it is **not automatically imported**.
+Update these files to change the generated resumes:
+
+- `common/identity.tex`: name, contact details, location, and links.
+- `sections/experience/surveymonkey.tex`: selected accomplishments and role history.
+- `sections/summary.tex` and `sections/skills.tex`: positioning and technical skills.
+- `sections/education.tex`: degree, institution, and dates.
+- `applications/*.tex`: section selection, order, and role-specific tagline.
+
+See [content review notes](docs/content-review.md) for source decisions and the
+confirmed employment timeline.
+
 ## Add a new application (a résumé for a job)
 
-Create `applications/<company>-<role>.tex`. Start from `acme-senior-swe.tex`:
+Create `applications/<company>-<role>.tex`. Start from `platform.tex`:
 
 ```latex
 \input{common/identity.tex}
@@ -47,7 +71,7 @@ Create `applications/<company>-<role>.tex`. Start from `acme-senior-swe.tex`:
 \input{sections/summary.tex}
 
 \ressection{Experience}
-\input{sections/experience/acme.tex}              % pick which jobs to show, in order
+\input{sections/experience/surveymonkey.tex}     % pick which jobs to show, in order
 
 \ressection{Skills}
 \input{sections/skills.tex}

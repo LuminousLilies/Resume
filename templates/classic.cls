@@ -7,7 +7,7 @@
 \ProvidesClass{classic}[2026/08/26 v1 Classic (serif) resume template]
 \LoadClass[11pt]{article}
 
-\RequirePackage[margin=0.85in]{geometry}
+\RequirePackage[left=0.85in,right=0.85in,top=0.6in,bottom=0.6in]{geometry}
 \RequirePackage{fontspec}
 \RequirePackage{enumitem}
 \RequirePackage{xcolor}
@@ -34,7 +34,7 @@
 
 % Section heading ------------------------------------------------------------
 \newcommand{\ressection}[1]{%
-  \vspace{8pt}{\large\scshape\bfseries #1}\par\vspace{-4pt}\hrule\vspace{6pt}%
+  \vspace{8pt}{\large\scshape\bfseries #1}\par\vspace{4pt}\hrule\vspace{6pt}%
 }
 
 % Entries --------------------------------------------------------------------

@@ -4,7 +4,7 @@
 # Recipe lines are TAB-indented (portable back to macOS's make 3.81).
 
 IMAGE    := resume-build
-APP      ?= acme-senior-swe
+APP      ?= platform
 TEMPLATE ?= classic
 OUT      := out
 UID      := $(shell id -u)

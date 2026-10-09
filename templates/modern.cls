@@ -8,7 +8,7 @@
 \ProvidesClass{modern}[2026/08/26 v1 Modern (sans, accent) resume template]
 \LoadClass[11pt]{article}
 
-\RequirePackage[margin=0.8in]{geometry}
+\RequirePackage[left=0.8in,right=0.8in,top=0.6in,bottom=0.6in]{geometry}
 \RequirePackage{fontspec}
 \RequirePackage{enumitem}
 \RequirePackage{xcolor}
@@ -19,6 +19,7 @@
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
 \linespread{1.05}
 
 % Header ---------------------------------------------------------------------
@@ -34,7 +35,7 @@
 % Section heading ------------------------------------------------------------
 \newcommand{\ressection}[1]{%
   \vspace{8pt}{\large\bfseries\color{accent}\MakeUppercase{#1}}\par
-  \vspace{-2pt}{\color{accent!35}\hrule height 0.8pt}\vspace{6pt}%
+  \vspace{3pt}{\color{accent!35}\hrule height 0.8pt}\vspace{6pt}%
 }
 
 % Entries --------------------------------------------------------------------

@@ -18,7 +18,7 @@ precise meaning, use it; the "avoid" phrasings cause a round of confusion.
 
 - **Section** — a template-agnostic **content** module under `sections/`. Only
   semantic macros, never formatting. Per-entry granularity where you tailor
-  (`sections/experience/acme.tex`, `sections/projects/*.tex`); whole-file where you
+  (`sections/experience/surveymonkey.tex`, `sections/projects/*.tex`); whole-file where you
   don't (`sections/skills.tex`, `education.tex`, `summary.tex`).
   _Avoid:_ "component", "block". Use *section*.
 
@@ -33,7 +33,7 @@ precise meaning, use it; the "avoid" phrasings cause a round of confusion.
   place; never re-type it in an application file.
 
 - **Build-time template selection** — the template is chosen when you build
-  (`make APP=acme-senior-swe TEMPLATE=modern`), not baked into the application file.
+  (`make APP=platform TEMPLATE=modern`), not baked into the application file.
   Same content → any template, zero duplication. Output: `out/<app>--<template>.pdf`.
 
 - **`out/`** — the single sink for everything generated (final PDF **and** all LaTeX

@@ -1,25 +1,21 @@
 % ---------------------------------------------------------------------------
-% Application recipe: Acme — Senior Backend Engineer.
+% Application recipe: general platform-engineer résumé.
 % Composes identity + a tailored tagline + the sections to show, in order.
 % Section headings live HERE (not in the section files), so this file has full
 % control of which sections appear and in what order.
 %
 % The template is chosen at BUILD time, not here:
-%   make APP=acme-senior-swe TEMPLATE=modern
+%   make APP=platform TEMPLATE=modern
 % ---------------------------------------------------------------------------
 \input{common/identity.tex}
 
-\resumeheader{\myname}{Senior Backend Engineer}
+\resumeheader{\myname}{Senior Software Engineer II, Platform}
 \contact{\myemail}{\myphone}{\mylocation}{\mylinks}
 
 \input{sections/summary.tex}
 
 \ressection{Experience}
-\input{sections/experience/acme.tex}
-\input{sections/experience/globex.tex}
-
-\ressection{Projects}
-\input{sections/projects/inventory-svc.tex}
+\input{sections/experience/surveymonkey.tex}
 
 \ressection{Skills}
 \input{sections/skills.tex}

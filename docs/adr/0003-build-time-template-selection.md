@@ -14,7 +14,7 @@ Application files declare **content only** (identity + chosen sections). The tem
 is a **build parameter**:
 
 ```
-make APP=acme-senior-swe TEMPLATE=modern
+make APP=platform TEMPLATE=modern
 ```
 
 Output is named `out/<app>--<template>.pdf` so variants of one résumé coexist rather
