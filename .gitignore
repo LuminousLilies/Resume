@@ -1,2 +1,27 @@
-# Everything LaTeX generates lands in out/ (latexmk/lualatex -output-directory).
-out/
+# Generated PDFs, previews, build logs, and LaTeX intermediates.
+/out/
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.xdv
+
+# Local source/reference material; curated LaTeX content is versioned instead.
+/resume.md
+/Keara Bird Resume.pdf
+
+# Operating-system files, editor backups, and local environments.
+.DS_Store
+._*
+*~
+*.swp
+*.swo
+/.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
