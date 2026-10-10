@@ -6,9 +6,9 @@
   developer-tooling accomplishments. The selected bullets are condensed from that
   document without adding savings, performance percentages, or other new metrics.
 - Existing `common/identity.tex` and `sections/education.tex` supply Ashley's contact
-  and education details. Existing experience content supplies the remote location
-  and QA platform accomplishment. Ashley's clarified timeline supplies the four
-  roles, their dates, and the grouping of accomplishments by role.
+  and education details. Existing experience content supplies the QA platform
+  accomplishment. Ashley's clarifications supply the four roles, their dates,
+  their locations, and the grouping of accomplishments by role.
 - `Keara Bird Resume.pdf` supplies the visual and organizational reference only.
   Keara's employers, personal details, awards, and individual accomplishments are
   not evidence about Ashley and were not incorporated as Ashley's experience.
@@ -30,14 +30,21 @@ and routine security maintenance remain in `resume.md` for future tailoring.
 
 Ashley clarified the four-role history on October 9, 2026:
 
-- QA Engineer: May 2018–2019.
-- Software Engineer, Design System: 2019–2021. TypeScript conversion, styling
+- QA Engineer: May 2018–2019, San Mateo, CA (headquarters).
+- Software Engineer, Design System: 2019–2021, San Mateo, CA (headquarters).
+  TypeScript conversion, styling
   performance, shared components, migration guides, and visual-regression testing.
-- Senior Software Engineer I, Platform Development: 2021–2024. TeamCity to GitHub
+- Senior Software Engineer I, Platform Development: 2021–2024, Remote. TeamCity to GitHub
   Actions and GitHub Enterprise Server to GitHub Enterprise Cloud migrations.
-- Senior Software Engineer II, Platform Development: 2024–Present. Remaining
+- Senior Software Engineer II, Platform Development: 2024–Present, Remote. Remaining
   platform work, including CI/CD and release automation, testing and infrastructure
   migrations, and AI code review.
+
+Ashley confirmed working at headquarters for QA and Software Engineer, then
+remotely for both senior roles. SurveyMonkey's
+[2023 vendor information](https://prod.smassets.net/assets/content/help/MNTV-DBA-SVMK-US-VF-2023-USD-No-bank-details-HC-xlsx.pdf)
+lists One Curiosity Way, San Mateo, CA 94403. The resume uses city and state for
+the office roles; the street address is retained here only as supporting context.
 
 The existing contact information and education dates are unchanged; check that
 they are current when reviewing the PDF.
